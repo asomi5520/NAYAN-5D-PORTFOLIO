@@ -1,101 +1,84 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const loader =
-    document.querySelector("#loader");
+    const loader = document.getElementById("loader");
+    const bar = document.querySelector(".loader-bar span");
+    const percent = document.querySelector(".loader-percent");
 
-  const bar =
-    document.querySelector(
-      ".loader-bar span"
-    );
+    if (!loader || !bar || !percent) {
+        console.error("Loader elements not found!");
+        return;
+    }
 
-  const percent =
-    document.querySelector(
-      ".loader-percent"
-    );
+    let progress = 0;
 
-  let progress = 0;
+    const loading = setInterval(() => {
 
-  const loading =
-    setInterval(() => {
+        progress += Math.floor(Math.random() * 8) + 4;
 
-      progress +=
-        Math.floor(Math.random() * 7) + 2;
+        if (progress >= 100) {
+            progress = 100;
+        }
 
-      if (progress >= 100) {
+        bar.style.width = progress + "%";
+        percent.textContent = progress + "%";
 
-        progress = 100;
+        if (progress >= 100) {
 
-        clearInterval(loading);
+            clearInterval(loading);
 
-        setTimeout(() => {
+            setTimeout(() => {
 
-          loader.style.transition =
-            "opacity .8s ease";
+                loader.style.opacity = "0";
+                loader.style.pointerEvents = "none";
 
-          loader.style.opacity = "0";
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 800);
 
-          setTimeout(() => {
-            loader.remove();
-          }, 800);
+            }, 500);
+        }
 
-        }, 400);
-      }
-
-      bar.style.width =
-        progress + "%";
-
-      percent.textContent =
-        progress + "%";
-
-    }, 80);
+    }, 100);
 
 
-  /* GLITCH TITLE */
+    // HERO GLITCH
 
-  const title =
-    document.querySelector(".hero-title");
+    const title = document.querySelector(".hero-title");
 
-  setInterval(() => {
+    if (title) {
 
-    title.style.transform =
-      `translateX(${(Math.random() - .5) * 3}px)`;
+        setInterval(() => {
 
-    setTimeout(() => {
-      title.style.transform = "";
-    }, 70);
+            title.style.transform =
+                `translateX(${(Math.random() - 0.5) * 4}px)`;
 
-  }, 4000);
+            setTimeout(() => {
+                title.style.transform = "";
+            }, 80);
+
+        }, 3000);
+    }
 
 
-  /* PARALLAX */
+    // SCROLL PARALLAX
 
-  window.addEventListener(
-    "scroll",
-    () => {
+    window.addEventListener("scroll", () => {
 
-      const scroll =
-        window.scrollY;
+        const hero = document.querySelector(".hero-content");
 
-      const hero =
-        document.querySelector(
-          ".hero-content"
-        );
+        if (!hero) return;
 
-      if (hero && scroll < window.innerHeight) {
+        const scroll = window.scrollY;
 
-        hero.style.transform =
-          `translateY(${scroll * .18}px)`;
+        if (scroll < window.innerHeight) {
 
-        hero.style.opacity =
-          Math.max(
-            0,
-            1 - scroll / 700
-          );
+            hero.style.transform =
+                `translateY(${scroll * 0.15}px)`;
 
-      }
+            hero.style.opacity =
+                Math.max(0, 1 - scroll / 600);
+        }
 
-    },
-    { passive: true }
-  );
+    });
 
 });
