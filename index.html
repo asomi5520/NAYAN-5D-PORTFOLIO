@@ -1,403 +1,1305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-  <title>NAYAN // 5D PORTFOLIO</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-  <meta name="description" content="Nayan — futuristic 5D creative portfolio">
+    <meta
+        name="description"
+        content="Nayan Hira — 5D Gaming Portfolio, Web Designer, Creative Developer and Professional Accountant."
+    >
 
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+    <meta
+        name="keywords"
+        content="Nayan Hira, web designer, gaming portfolio, 3D website, accountant, developer"
+    >
 
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
-    }
-  }
-  </script>
+    <meta name="author" content="Nayan Hira">
+
+    <meta name="theme-color" content="#05060b">
+
+    <title>NAYAN HIRA | 5D Gaming Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
-  <div id="loader">
-    <div class="loader-inner">
-      <div class="loader-logo">NAYAN<span>_5D</span></div>
-      <div class="loader-terminal">
-        <p>> INITIALIZING SYSTEM...</p>
-        <p>> LOADING NEURAL INTERFACE...</p>
-        <p>> CONNECTING 3D ENGINE...</p>
-        <p>> ENCRYPTION: <span>ACTIVE</span></p>
-        <p>> ACCESS: <span>GRANTED</span></p>
-      </div>
-      <div class="loader-bar">
-        <span></span>
-      </div>
-      <div class="loader-percent">0%</div>
+    <!-- =====================================================
+         LOADING SCREEN
+    ====================================================== -->
+
+    <div id="loader">
+
+        <div class="loader-logo">
+            <span>N</span>
+            <span>H</span>
+        </div>
+
+        <div class="loader-line">
+            <span></span>
+        </div>
+
+        <p>INITIALIZING NAYAN SYSTEM...</p>
+
     </div>
-  </div>
 
-  <div class="noise"></div>
-  <div class="scanlines"></div>
 
-  <div id="cursor">
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
-  </div>
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
 
-  <header class="nav">
+    <canvas id="space"></canvas>
 
-    <a href="#home" class="brand">
-      <span class="brand-symbol">◈</span>
-      NAYAN<span class="green">_5D</span>
-    </a>
+    <div class="noise"></div>
 
-    <nav id="navigation">
-      <a href="#home">01 / HOME</a>
-      <a href="#about">02 / ABOUT</a>
-      <a href="#projects">03 / PROJECTS</a>
-      <a href="#skills">04 / SKILLS</a>
-      <a href="#contact">05 / CONTACT</a>
-    </nav>
 
-    <button class="menu-button" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <!-- =====================================================
+         CUSTOM CURSOR
+    ====================================================== -->
 
-  </header>
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
 
-  <main>
 
-    <!-- HERO -->
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
-    <section id="home" class="hero">
+    <header class="nav">
 
-      <canvas id="three-canvas"></canvas>
+        <!-- LOGO -->
 
-      <div class="hero-grid"></div>
+        <a
+            href="#home"
+            class="logo magnetic"
+            aria-label="Nayan Hira Home"
+        >
 
-      <div class="hero-content">
+            N<span>H</span>
 
-        <div class="system-status">
-          <span class="status-dot"></span>
-          SYSTEM ONLINE
-        </div>
+            <small>5D</small>
 
-        <p class="hero-kicker">
-          CREATIVE DEVELOPER // DIGITAL ARCHITECT
-        </p>
-
-        <h1 class="hero-title">
-          <span>NAYAN</span>
-          <span class="outline">5D</span>
-        </h1>
-
-        <p class="hero-description">
-          I BUILD DIGITAL EXPERIENCES THAT EXIST
-          SOMEWHERE BETWEEN <span>CODE</span>,
-          <span>DESIGN</span> AND <span>IMAGINATION</span>.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#projects" class="btn magnetic">
-            <span>ENTER SYSTEM</span>
-            <b>↗</b>
-          </a>
-
-          <a href="#contact" class="text-link">
-            CONTACT ME →
-          </a>
-        </div>
-
-      </div>
-
-      <div class="hero-meta">
-        <div>
-          <small>LOCATION</small>
-          <strong>INDIA // IN</strong>
-        </div>
-
-        <div>
-          <small>STATUS</small>
-          <strong class="green">AVAILABLE</strong>
-        </div>
-
-        <div>
-          <small>MODE</small>
-          <strong>CREATIVE</strong>
-        </div>
-      </div>
-
-      <div class="scroll-indicator">
-        <span>SCROLL TO EXPLORE</span>
-        <div></div>
-      </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about" class="section about">
-
-      <div class="section-number">02</div>
-
-      <div class="section-heading">
-        <p>// IDENTITY</p>
-        <h2>WHO<br><span>AM I?</span></h2>
-      </div>
-
-      <div class="about-content">
-
-        <div class="terminal-box">
-          <div class="terminal-header">
-            <span></span>
-            <span></span>
-            <span></span>
-            <label>nayan@system:~</label>
-          </div>
-
-          <div class="terminal-body">
-            <p><span class="green">root@nayan</span>:~$ whoami</p>
-
-            <p class="terminal-output">
-              Creative developer, designer and digital explorer.
-            </p>
-
-            <p><span class="green">root@nayan</span>:~$ mission</p>
-
-            <p class="terminal-output">
-              Create experiences that people remember.
-            </p>
-
-            <p><span class="green">root@nayan</span>:~$ status</p>
-
-            <p class="terminal-output green">
-              ONLINE // BUILDING // EVOLVING
-            </p>
-
-            <span class="terminal-cursor">█</span>
-          </div>
-        </div>
-
-        <div class="about-text">
-
-          <p class="large-text">
-            I DON'T JUST BUILD WEBSITES.
-            <span>I BUILD DIGITAL WORLDS.</span>
-          </p>
-
-          <p>
-            My work combines visual design, animation,
-            interaction and technology to create digital
-            experiences with personality.
-          </p>
-
-          <p>
-            Every interface should feel alive.
-            Every interaction should have a purpose.
-            Every pixel should tell a story.
-          </p>
-
-          <div class="stats">
-
-            <div class="stat">
-              <strong data-count="50">0</strong>
-              <span>PROJECTS</span>
-            </div>
-
-            <div class="stat">
-              <strong data-count="20">0</strong>
-              <span>CLIENTS</span>
-            </div>
-
-            <div class="stat">
-              <strong data-count="5">0</strong>
-              <span>YEARS</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- PROJECTS -->
-
-    <section id="projects" class="section projects">
-
-      <div class="section-number">03</div>
-
-      <div class="section-heading">
-        <p>// SELECTED WORK</p>
-        <h2>MY<br><span>PROJECTS</span></h2>
-      </div>
-
-      <div class="project-grid">
-
-        <article class="project-card magnetic-card">
-
-          <div class="project-number">001</div>
-
-          <div class="project-visual visual-one">
-            <span>CYBER//01</span>
-          </div>
-
-          <div class="project-info">
-            <p>WEB EXPERIENCE</p>
-            <h3>NEURAL<br>INTERFACE</h3>
-            <a href="#">VIEW PROJECT ↗</a>
-          </div>
-
-        </article>
-
-        <article class="project-card magnetic-card">
-
-          <div class="project-number">002</div>
-
-          <div class="project-visual visual-two">
-            <span>VOID//02</span>
-          </div>
-
-          <div class="project-info">
-            <p>3D EXPERIENCE</p>
-            <h3>DIGITAL<br>VOID</h3>
-            <a href="#">VIEW PROJECT ↗</a>
-          </div>
-
-        </article>
-
-        <article class="project-card magnetic-card">
-
-          <div class="project-number">003</div>
-
-          <div class="project-visual visual-three">
-            <span>CORE//03</span>
-          </div>
-
-          <div class="project-info">
-            <p>BRAND SYSTEM</p>
-            <h3>QUANTUM<br>CORE</h3>
-            <a href="#">VIEW PROJECT ↗</a>
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- SKILLS -->
-
-    <section id="skills" class="section skills">
-
-      <div class="section-number">04</div>
-
-      <div class="section-heading">
-        <p>// TECHNOLOGY</p>
-        <h2>MY<br><span>ARSENAL</span></h2>
-      </div>
-
-      <div class="skills-list">
-
-        <div class="skill">
-          <span>01</span>
-          <h3>HTML / CSS</h3>
-          <div class="skill-line"><i style="width:95%"></i></div>
-          <b>95%</b>
-        </div>
-
-        <div class="skill">
-          <span>02</span>
-          <h3>JAVASCRIPT</h3>
-          <div class="skill-line"><i style="width:90%"></i></div>
-          <b>90%</b>
-        </div>
-
-        <div class="skill">
-          <span>03</span>
-          <h3>THREE.JS</h3>
-          <div class="skill-line"><i style="width:88%"></i></div>
-          <b>88%</b>
-        </div>
-
-        <div class="skill">
-          <span>04</span>
-          <h3>UI / UX</h3>
-          <div class="skill-line"><i style="width:92%"></i></div>
-          <b>92%</b>
-        </div>
-
-        <div class="skill">
-          <span>05</span>
-          <h3>MOTION DESIGN</h3>
-          <div class="skill-line"><i style="width:85%"></i></div>
-          <b>85%</b>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact" class="section contact">
-
-      <div class="section-number">05</div>
-
-      <div class="contact-inner">
-
-        <p>// CONNECTION REQUEST</p>
-
-        <h2>
-          LET'S BUILD<br>
-          <span>SOMETHING</span><br>
-          IMPOSSIBLE.
-        </h2>
-
-        <a href="mailto:hello@example.com" class="contact-button magnetic">
-          START A PROJECT
-          <span>↗</span>
         </a>
 
-      </div>
 
-      <footer>
+        <!-- MOBILE MENU -->
 
-        <span>© 2026 NAYAN_5D</span>
+        <button
+            class="menu-btn"
+            aria-label="Open navigation menu"
+            type="button"
+        >
 
-        <div>
-          <a href="#">INSTAGRAM</a>
-          <a href="#">GITHUB</a>
-          <a href="#">LINKEDIN</a>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- NAV LINKS -->
+
+        <nav class="nav-links">
+
+            <a href="#home">HOME</a>
+
+            <a href="#about">ABOUT</a>
+
+            <a href="#skills">SKILLS</a>
+
+            <a href="#projects">PROJECTS</a>
+
+            <a href="#gaming">GAMING</a>
+
+            <a href="#contact">CONTACT</a>
+
+        </nav>
+
+
+        <!-- NAV CTA -->
+
+        <a
+            href="#contact"
+            class="nav-cta magnetic"
+        >
+
+            LET'S BUILD
+
+            <span>↗</span>
+
+        </a>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section
+            id="home"
+            class="hero section"
+        >
+
+            <!-- HERO TEXT -->
+
+            <div class="hero-copy reveal">
+
+                <p class="eyebrow">
+
+                    <span class="pulse"></span>
+
+                    DIGITAL CREATOR
+                    /
+                    ACCOUNTANT
+                    /
+                    GAMER
+
+                </p>
+
+
+                <h1>
+
+                    NAYAN
+
+                    <br>
+
+                    <span>HIRA</span>
+
+                </h1>
+
+
+                <p class="hero-text">
+
+                    I build
+
+                    <b>modern websites</b>,
+
+                    explore
+
+                    <b>3D worlds</b>,
+
+                    create
+
+                    <b>gaming experiences</b>
+
+                    and work with
+
+                    <b>professional accounting.</b>
+
+                </p>
+
+
+                <!-- HERO BUTTONS -->
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#projects"
+                        class="btn btn-primary magnetic"
+                    >
+
+                        EXPLORE MY WORLD
+
+                        <span>↗</span>
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="btn btn-ghost magnetic"
+                    >
+
+                        CONTACT ME
+
+                    </a>
+
+                </div>
+
+
+                <!-- HERO STATS -->
+
+                <div class="mini-stats">
+
+                    <div>
+
+                        <b>3+</b>
+
+                        <span>
+                            YEARS
+                            <br>
+                            ACCOUNTING
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <b>3D</b>
+
+                        <span>
+                            WEB
+                            <br>
+                            EXPERIENCE
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <b>∞</b>
+
+                        <span>
+                            IDEAS
+                            <br>
+                            TO BUILD
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HERO 3D VISUAL -->
+
+            <div class="hero-visual">
+
+                <div class="orbital orbital-a"></div>
+
+                <div class="orbital orbital-b"></div>
+
+
+                <!-- HUD -->
+
+                <div class="hud-card hud-top">
+
+                    <span>SYS.STATUS</span>
+
+                    <b>ONLINE</b>
+
+                </div>
+
+
+                <!-- CORE -->
+
+                <div class="core-3d">
+
+                    <div class="core-ring ring1"></div>
+
+                    <div class="core-ring ring2"></div>
+
+                    <div class="core-ring ring3"></div>
+
+
+                    <div class="core-cube">
+
+                        <span>N</span>
+
+                    </div>
+
+
+                    <div class="core-label">
+
+                        NAYAN
+
+                        <br>
+
+                        <small>
+                            CREATIVE CORE
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECOND HUD -->
+
+                <div class="hud-card hud-bottom">
+
+                    <span>LOCATION</span>
+
+                    <b>ASSAM / INDIA</b>
+
+                </div>
+
+            </div>
+
+
+            <!-- SCROLL -->
+
+            <div class="scroll-down">
+
+                SCROLL TO EXPLORE
+
+                <span>↓</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <section
+            id="about"
+            class="section about"
+        >
+
+            <div class="section-head reveal">
+
+                <span>
+                    01 / IDENTITY
+                </span>
+
+                <h2>
+
+                    ONE PERSON.
+
+                    <br>
+
+                    <em>MULTIPLE WORLDS.</em>
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="about-grid">
+
+
+                <!-- ABOUT VISUAL -->
+
+                <div class="about-visual reveal">
+
+                    <div class="portrait-placeholder">
+
+                        <span>NH</span>
+
+                        <i>
+
+                            CREATIVE
+                            <br>
+                            MODE
+
+                        </i>
+
+                    </div>
+
+                    <div class="scan"></div>
+
+                </div>
+
+
+
+                <!-- ABOUT TEXT -->
+
+                <div class="about-copy reveal">
+
+                    <p class="big-copy">
+
+                        I am
+
+                        <strong>Nayan Hira</strong>
+
+                        — a professional accountant and digital creator who enjoys building futuristic websites and gaming-inspired experiences.
+
+                    </p>
+
+
+                    <p>
+
+                        My work sits between numbers and creativity:
+
+                        accounting,
+
+                        web design,
+
+                        UI experiments,
+
+                        3D animation,
+
+                        gaming concepts
+
+                        and
+
+                        digital branding.
+
+                    </p>
+
+
+
+                    <!-- IDENTITY LIST -->
+
+                    <div class="identity-list">
+
+
+                        <div>
+
+                            <span>01</span>
+
+                            <b>ACCOUNTANT</b>
+
+                            <small>
+                                Tally • Accounts • Business Workflow
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>02</span>
+
+                            <b>WEB DESIGNER</b>
+
+                            <small>
+                                HTML • CSS • JavaScript • 3D UI
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>03</span>
+
+                            <b>GAMING CREATOR</b>
+
+                            <small>
+                                Interactive Concepts • Motion • Visuals
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SKILLS
+        ================================================== -->
+
+        <section
+            id="skills"
+            class="section skills"
+        >
+
+            <div class="section-head reveal">
+
+                <span>
+                    02 / LOADOUT
+                </span>
+
+                <h2>
+
+                    MY
+
+                    <em>SKILL TREE</em>
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="skill-grid">
+
+
+                <!-- WEB -->
+
+                <article class="skill-card reveal">
+
+                    <div class="icon">
+                        01
+                    </div>
+
+                    <h3>
+                        WEB DESIGN
+                    </h3>
+
+                    <p>
+
+                        Modern responsive interfaces with animation, interaction and strong visual hierarchy.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span>HTML5</span>
+
+                        <span>CSS3</span>
+
+                        <span>JAVASCRIPT</span>
+
+                        <span>UI/UX</span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 3D -->
+
+                <article class="skill-card reveal">
+
+                    <div class="icon">
+                        02
+                    </div>
+
+                    <h3>
+                        3D / MOTION
+                    </h3>
+
+                    <p>
+
+                        Futuristic environments, particles, floating objects, HUD interfaces and cinematic transitions.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span>THREE.JS</span>
+
+                        <span>CANVAS</span>
+
+                        <span>MOTION</span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ACCOUNTING -->
+
+                <article class="skill-card reveal">
+
+                    <div class="icon">
+                        03
+                    </div>
+
+                    <h3>
+                        ACCOUNTING
+                    </h3>
+
+                    <p>
+
+                        Professional accounting workflows, TallyPrime, ledgers, reports and business records.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span>TALLY</span>
+
+                        <span>LEDGER</span>
+
+                        <span>REPORTS</span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CREATIVE -->
+
+                <article class="skill-card reveal">
+
+                    <div class="icon">
+                        04
+                    </div>
+
+                    <h3>
+                        CREATIVE TECH
+                    </h3>
+
+                    <p>
+
+                        Branding, portfolio systems, GitHub Pages, SEO basics and digital experiments.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span>GITHUB</span>
+
+                        <span>SEO</span>
+
+                        <span>BRANDING</span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
+
+        <section
+            id="projects"
+            class="section projects"
+        >
+
+            <div class="section-head reveal">
+
+                <span>
+                    03 / MISSIONS
+                </span>
+
+                <h2>
+
+                    SELECTED
+
+                    <em>PROJECTS</em>
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="project-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <article
+                    class="project-card large reveal"
+                >
+
+                    <div class="project-art art-one">
+
+                        <span>01</span>
+
+                        <b>
+                            5D PORTFOLIO
+                        </b>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <p>
+                            WEB EXPERIENCE
+                        </p>
+
+                        <h3>
+                            NAYAN 5D WORLD
+                        </h3>
+
+                        <a href="#contact">
+                            VIEW PROJECT ↗
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 2 -->
+
+                <article
+                    class="project-card reveal"
+                >
+
+                    <div class="project-art art-two">
+
+                        <span>02</span>
+
+                        <b>
+                            ASOMI
+                        </b>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <p>
+                            BUSINESS WEBSITE
+                        </p>
+
+                        <h3>
+                            ASOMI DIGITAL
+                        </h3>
+
+                        <a href="#contact">
+                            VIEW PROJECT ↗
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 3 -->
+
+                <article
+                    class="project-card reveal"
+                >
+
+                    <div class="project-art art-three">
+
+                        <span>03</span>
+
+                        <b>
+                            ACCOUNTING
+                        </b>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <p>
+                            BUSINESS SYSTEM
+                        </p>
+
+                        <h3>
+                            ACCOUNTING WORKFLOW
+                        </h3>
+
+                        <a href="#contact">
+                            VIEW PROJECT ↗
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             GAMING ZONE
+        ================================================== -->
+
+        <section
+            id="gaming"
+            class="section gaming"
+        >
+
+            <div class="section-head reveal">
+
+                <span>
+                    04 / GAME ZONE
+                </span>
+
+                <h2>
+
+                    ENTER THE
+
+                    <em>ARCADE</em>
+
+                </h2>
+
+            </div>
+
+
+
+            <!-- PLAYER BANNER -->
+
+            <div class="game-banner reveal">
+
+                <div>
+
+                    <p>
+                        PLAYER PROFILE
+                    </p>
+
+                    <h3>
+                        NAYAN // LEVEL ∞
+                    </h3>
+
+                    <span>
+                        DESIGN • BUILD • PLAY
+                    </span>
+
+                </div>
+
+
+                <div class="game-score">
+
+                    <small>
+                        XP
+                    </small>
+
+                    <b>
+                        9999
+                    </b>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GAMING VIDEOS -->
+
+            <div class="video-grid">
+
+
+                <!-- VIDEO 1 -->
+
+                <a
+                    class="video-card reveal"
+                    href="https://www.youtube.com/results?search_query=gaming+trailer"
+                    target="_blank"
+                    rel="noopener"
+                >
+
+                    <div class="video-thumb v1">
+
+                        <span>▶</span>
+
+                        <small>
+                            GAMING TRAILERS
+                        </small>
+
+                    </div>
+
+
+                    <h3>
+                        TRAILER ZONE
+                    </h3>
+
+                    <p>
+                        Open gaming videos
+                    </p>
+
+                </a>
+
+
+
+                <!-- VIDEO 2 -->
+
+                <a
+                    class="video-card reveal"
+                    href="https://www.youtube.com/results?search_query=3D+gameplay"
+                    target="_blank"
+                    rel="noopener"
+                >
+
+                    <div class="video-thumb v2">
+
+                        <span>▶</span>
+
+                        <small>
+                            3D GAMEPLAY
+                        </small>
+
+                    </div>
+
+
+                    <h3>
+                        3D GAMEPLAY
+                    </h3>
+
+                    <p>
+                        Explore gameplay worlds
+                    </p>
+
+                </a>
+
+
+
+                <!-- VIDEO 3 -->
+
+                <a
+                    class="video-card reveal"
+                    href="https://www.youtube.com/results?search_query=gaming+montage"
+                    target="_blank"
+                    rel="noopener"
+                >
+
+                    <div class="video-thumb v3">
+
+                        <span>▶</span>
+
+                        <small>
+                            GAME MONTAGE
+                        </small>
+
+                    </div>
+
+
+                    <h3>
+                        MONTAGE HUB
+                    </h3>
+
+                    <p>
+                        Watch gaming edits
+                    </p>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             TERMINAL
+        ================================================== -->
+
+        <section
+            class="section terminal-section"
+        >
+
+            <div class="terminal reveal">
+
+
+                <div class="terminal-bar">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <b>
+                        NAYAN_OS / TERMINAL
+                    </b>
+
+                </div>
+
+
+
+                <div class="terminal-body">
+
+
+                    <p>
+
+                        <i>
+                            nayan@creative:~$
+                        </i>
+
+                        whoami
+
+                    </p>
+
+
+                    <h3>
+                        NAYAN HIRA
+                    </h3>
+
+
+
+                    <p>
+
+                        <i>
+                            nayan@creative:~$
+                        </i>
+
+                        mission
+
+                    </p>
+
+
+                    <h3>
+                        BUILD DIGITAL WORLDS.
+                    </h3>
+
+
+
+                    <p>
+
+                        <i>
+                            nayan@creative:~$
+                        </i>
+
+                        status
+
+                    </p>
+
+
+                    <h3 class="green">
+
+                        ● ONLINE / READY TO CREATE
+
+                    </h3>
+
+
+
+                    <p class="typing">
+
+                        <i>
+                            nayan@creative:~$
+                        </i>
+
+                        <span id="typing"></span>
+
+                        <b>_</b>
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+        <section
+            id="contact"
+            class="section contact"
+        >
+
+            <div class="section-head reveal">
+
+                <span>
+                    05 / FINAL LEVEL
+                </span>
+
+                <h2>
+
+                    LET'S BUILD
+
+                    <br>
+
+                    <em>SOMETHING.</em>
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="contact-grid">
+
+
+                <!-- CONTACT TEXT -->
+
+                <div class="contact-copy reveal">
+
+                    <p>
+
+                        Have a website idea, gaming concept, business project or creative collaboration?
+
+                    </p>
+
+
+                    <p class="muted">
+
+                        Send a message and let's turn the idea into a digital experience.
+
+                    </p>
+
+
+
+                    <div class="contact-links">
+
+                        <a href="mailto:hello@nayanhira.dev">
+                            EMAIL ↗
+                        </a>
+
+                        <a
+                            href="https://github.com/"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            GITHUB ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONTACT FORM -->
+
+                <form
+                    class="contact-form reveal"
+                    id="contactForm"
+                >
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="YOUR NAME"
+                        required
+                    >
+
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="YOUR EMAIL"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        name="subject"
+                        placeholder="PROJECT TYPE"
+                    >
+
+
+                    <textarea
+                        name="message"
+                        rows="6"
+                        placeholder="TELL ME ABOUT YOUR IDEA"
+                        required
+                    ></textarea>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+
+                        SEND TRANSMISSION
+
+                        <span>↗</span>
+
+                    </button>
+
+
+                    <p id="formMsg"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="logo">
+
+            N<span>H</span>
+
+            <small>
+                5D
+            </small>
+
         </div>
 
-        <span>DESIGNED // CODED // NAYAN</span>
 
-      </footer>
+        <p>
 
-    </section>
+            ©
 
-  </main>
+            <span id="year"></span>
 
-<script src="js/cursor.js"></script>
-<script src="js/animations.js"></script>
-<script src="js/navigation.js"></script>
-<script src="js/main.js"></script>
+            NAYAN HIRA.
 
-<script type="module" src="js/three-scene.js"></script>
+            BUILT FOR THE NEXT LEVEL.
+
+        </p>
+
+
+        <a href="#home">
+            BACK TO TOP ↑
+        </a>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         THREE.JS
+    ====================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"
+    ></script>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/cursor.js"></script>
+
+    <script src="js/navigation.js"></script>
+
+    <script src="js/animations.js"></script>
+
+    <script src="js/three-scene.js"></script>
+
+    <script src="js/main.js"></script>
+
 
 </body>
 </html>
