@@ -1,151 +1,241 @@
-javascript
-export function initNavigation() {
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+(() => {
 
     const menuButton =
-        document.querySelector(
-            ".menu-button"
-        );
+        document.querySelector(".menu-btn");
 
+    const navLinks =
+        document.querySelector(".nav-links");
 
-    const mobileMenu =
-        document.querySelector(
-            ".mobile-menu"
-        );
-
-
-    const closeButton =
-        document.querySelector(
-            ".mobile-menu-close"
-        );
-
-
-    const links =
-        document.querySelectorAll(
-            ".mobile-menu a"
-        );
-
-
-    if (!menuButton || !mobileMenu) {
+    if (!menuButton || !navLinks) {
         return;
     }
 
 
-    /* =====================================================
-       OPEN
-    ====================================================== */
+    /* -----------------------------------------------------
+       MOBILE MENU
+    ----------------------------------------------------- */
 
     menuButton.addEventListener(
         "click",
         () => {
 
-            mobileMenu.classList.add(
+            navLinks.classList.toggle(
+                "open"
+            );
+
+            menuButton.classList.toggle(
                 "active"
             );
 
+            const spans =
+                menuButton.querySelectorAll(
+                    "span"
+                );
 
-            gsap.from(
-                ".mobile-menu a",
-                {
+            if (
+                menuButton.classList.contains(
+                    "active"
+                )
+            ) {
 
-                    y: 60,
+                spans[0].style.transform =
+                    "translateY(7px) rotate(45deg)";
 
-                    opacity: 0,
+                spans[1].style.opacity =
+                    "0";
 
-                    duration: .8,
+                spans[2].style.transform =
+                    "translateY(-7px) rotate(-45deg)";
 
-                    stagger: .08,
+            } else {
 
-                    ease: "power4.out"
+                spans.forEach((span) => {
 
-                }
-            );
+                    span.style.transform =
+                        "";
 
+                    span.style.opacity =
+                        "";
+                });
+            }
         }
     );
 
 
-    /* =====================================================
-       CLOSE
-    ====================================================== */
+    /* -----------------------------------------------------
+       CLOSE MOBILE MENU
+    ----------------------------------------------------- */
 
-    closeButton.addEventListener(
-        "click",
-        () => {
+    const links =
+        navLinks.querySelectorAll("a");
 
-            mobileMenu.classList.remove(
-                "active"
-            );
+    links.forEach((link) => {
 
-        }
-    );
+        link.addEventListener(
+            "click",
+            () => {
 
+                navLinks.classList.remove(
+                    "open"
+                );
 
-    /* =====================================================
-       LINKS
-    ====================================================== */
+                menuButton.classList.remove(
+                    "active"
+                );
 
-    links.forEach(
-        link => {
-
-            link.addEventListener(
-                "click",
-                () => {
-
-                    mobileMenu.classList.remove(
-                        "active"
+                const spans =
+                    menuButton.querySelectorAll(
+                        "span"
                     );
 
-                }
-            );
+                spans.forEach((span) => {
+
+                    span.style.transform =
+                        "";
+
+                    span.style.opacity =
+                        "";
+                });
+            }
+        );
+    });
+
+
+    /* -----------------------------------------------------
+       ACTIVE NAVIGATION
+    ----------------------------------------------------- */
+
+    const sections =
+        document.querySelectorAll(
+            "section[id]"
+        );
+
+
+    const observer =
+        new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach(
+                    (entry) => {
+
+                        if (!entry.isIntersecting) {
+                            return;
+                        }
+
+                        const id =
+                            entry.target.id;
+
+                        links.forEach(
+                            (link) => {
+
+                                link.classList.remove(
+                                    "active"
+                                );
+
+                                if (
+                                    link.getAttribute(
+                                        "href"
+                                    ) === `#${id}`
+                                ) {
+
+                                    link.classList.add(
+                                        "active"
+                                    );
+                                }
+                            }
+                        );
+                    }
+                );
+
+            },
+            {
+                threshold: 0.35
+            }
+        );
+
+
+    sections.forEach(
+        (section) => {
+
+            observer.observe(section);
 
         }
     );
 
 
-    /* =====================================================
-       SMOOTH ANCHOR
-    ====================================================== */
+    /* -----------------------------------------------------
+       NAV BACKGROUND ON SCROLL
+    ----------------------------------------------------- */
 
-    document
-        .querySelectorAll(
-            'a[href^="#"]'
-        )
-        .forEach(link => {
+    const nav =
+        document.querySelector(".nav");
 
-            link.addEventListener(
-                "click",
-                event => {
+    if (nav) {
 
-                    const target =
-                        document.querySelector(
-                            link.getAttribute(
-                                "href"
-                            )
-                        );
+        window.addEventListener(
+            "scroll",
+            () => {
 
+                if (window.scrollY > 40) {
 
-                    if (!target) {
-                        return;
-                    }
+                    nav.classList.add(
+                        "scrolled"
+                    );
 
+                } else {
 
-                    event.preventDefault();
-
-
-                    window.scrollTo({
-
-                        top:
-                            target.offsetTop,
-
-                        behavior:
-                            "smooth"
-
-                    });
-
+                    nav.classList.remove(
+                        "scrolled"
+                    );
                 }
-            );
 
-        });
+            },
+            {
+                passive: true
+            }
+        );
+    }
 
-}
 
+    /* -----------------------------------------------------
+       ESCAPE CLOSE
+    ----------------------------------------------------- */
+
+    document.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                navLinks.classList.remove(
+                    "open"
+                );
+
+                menuButton.classList.remove(
+                    "active"
+                );
+
+                const spans =
+                    menuButton.querySelectorAll(
+                        "span"
+                    );
+
+                spans.forEach((span) => {
+
+                    span.style.transform =
+                        "";
+
+                    span.style.opacity =
+                        "";
+                });
+            }
+        }
+    );
+
+})();
