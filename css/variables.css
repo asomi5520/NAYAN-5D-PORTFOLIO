@@ -1,1 +1,26 @@
+css
+:root {
+
+    --bg: #030305;
+
+    --white: #ffffff;
+
+    --muted: rgba(255,255,255,.42);
+
+    --soft: rgba(255,255,255,.12);
+
+    --border: rgba(255,255,255,.14);
+
+    --container: 90vw;
+
+    --ease: cubic-bezier(.77,0,.18,1);
+
+    --fast: .3s;
+
+    --normal: .6s;
+
+    --slow: 1s;
+
+}
+```
 
