@@ -1,134 +1,133 @@
-css
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
-    html,
-    body {
-        cursor: auto;
-    }
+  body {
+    cursor: auto;
+  }
 
+  #cursor {
+    display: none;
+  }
 
-    .cursor,
-    .cursor-ring {
-        display: none;
-    }
+  nav {
+    position: fixed;
+    inset: 0;
+    background: rgba(2,4,3,.97);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    transform: translateX(100%);
+    transition: transform .5s var(--ease);
+  }
 
+  nav.active {
+    transform: translateX(0);
+  }
 
-    .nav {
-        width: 88vw;
+  nav a {
+    font-size: 14px;
+  }
 
-        height: 80px;
-    }
+  .menu-button {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 20;
+  }
 
+  .menu-button span {
+    width: 25px;
+    height: 1px;
+    background: var(--green);
+  }
 
-    .nav-links {
-        display: none;
-    }
+  .hero-content {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
 
+  .hero-meta {
+    display: none;
+  }
 
-    .menu-button {
-        display: block;
-    }
+  .scroll-indicator {
+    left: 6vw;
+  }
 
+  .section {
+    padding: 120px 6vw;
+  }
 
-    .hero-container {
-        width: 88vw;
-    }
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
 
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .hero-title {
-        font-size: clamp(
-            4.2rem,
-            19vw,
-            9rem
-        );
-    }
+  .project-visual {
+    height: 300px;
+  }
 
+  .skill {
+    grid-template-columns: 35px 1fr 1fr 45px;
+    gap: 12px;
+  }
 
-    .hero-description {
-        width: 230px;
-
-        font-size: 10px;
-    }
-
-
-    .scroll-indicator {
-        display: none;
-    }
-
-
-    .manifesto {
-        min-height: 100vh;
-    }
-
-
-    .manifesto-text {
-        font-size: clamp(
-            2.8rem,
-            11vw,
-            5rem
-        );
-    }
-
-
-    .projects-section {
-        height: 320vh;
-    }
-
-
-    .project-card {
-        width: 82vw;
-
-        height: 58vh;
-    }
-
-
-    .orb-large {
-        width: 55vw;
-        height: 55vw;
-    }
-
-
-    .skill-item {
-        min-height: 100px;
-
-        grid-template-columns:
-            40px
-            1fr;
-    }
-
-
-    .skill-type {
-        display: none;
-    }
-
-
-    .skill-item h3 {
-        font-size: 2rem;
-    }
-
-
-    .about-grid {
-        grid-template-columns: 1fr;
-
-        gap: 70px;
-    }
-
-
-    .about-title {
-        font-size: 20vw;
-    }
-
-
-    .contact-title {
-        font-size: 20vw;
-    }
-
-
-    footer {
-        flex-direction: column;
-
-        gap: 15px;
-    }
-
+  footer {
+    flex-direction: column;
+    gap: 25px;
+  }
 }
 
+@media (max-width: 600px) {
+
+  .nav {
+    padding: 22px 6vw;
+  }
+
+  .hero-title {
+    font-size: 24vw;
+  }
+
+  .hero-description {
+    font-size: 11px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-heading h2 {
+    font-size: 18vw;
+  }
+
+  .terminal-body {
+    padding: 20px;
+    font-size: 10px;
+  }
+
+  .stats {
+    gap: 25px;
+  }
+
+  .skill {
+    grid-template-columns: 30px 1fr 45px;
+  }
+
+  .skill-line {
+    grid-column: 2 / 4;
+  }
+
+  .contact h2 {
+    font-size: 17vw;
+  }
+
+  footer div {
+    flex-wrap: wrap;
+  }
+}
