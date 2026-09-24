@@ -1,825 +1,402 @@
-html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+  <title>NAYAN // 5D PORTFOLIO</title>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <meta name="description" content="Nayan — futuristic 5D creative portfolio">
 
-    <meta
-        name="description"
-        content="Nayan Hira — AI Developer, Creative Developer and Future Builder."
-    >
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 
-    <meta
-        name="theme-color"
-        content="#030305"
-    >
-
-    <title>Nayan Hira — AI × Code × Future</title>
-
-    <!-- =====================================================
-         FONTS
-    ====================================================== -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- =====================================================
-         CSS
-    ====================================================== -->
-
-    <link rel="stylesheet" href="css/reset.css">
-
-    <link rel="stylesheet" href="css/variables.css">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="css/responsive.css">
-
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
 </head>
-
 
 <body>
 
-    <!-- =====================================================
-         LOADER
-    ====================================================== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">NAYAN<span>_5D</span></div>
+      <div class="loader-terminal">
+        <p>> INITIALIZING SYSTEM...</p>
+        <p>> LOADING NEURAL INTERFACE...</p>
+        <p>> CONNECTING 3D ENGINE...</p>
+        <p>> ENCRYPTION: <span>ACTIVE</span></p>
+        <p>> ACCESS: <span>GRANTED</span></p>
+      </div>
+      <div class="loader-bar">
+        <span></span>
+      </div>
+      <div class="loader-percent">0%</div>
+    </div>
+  </div>
 
-    <div class="loader">
+  <div class="noise"></div>
+  <div class="scanlines"></div>
 
-        <div class="loader-inner">
+  <div id="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
 
-            <div class="loader-name">
-                NAYAN
+  <header class="nav">
+
+    <a href="#home" class="brand">
+      <span class="brand-symbol">◈</span>
+      NAYAN<span class="green">_5D</span>
+    </a>
+
+    <nav id="navigation">
+      <a href="#home">01 / HOME</a>
+      <a href="#about">02 / ABOUT</a>
+      <a href="#projects">03 / PROJECTS</a>
+      <a href="#skills">04 / SKILLS</a>
+      <a href="#contact">05 / CONTACT</a>
+    </nav>
+
+    <button class="menu-button" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section id="home" class="hero">
+
+      <canvas id="three-canvas"></canvas>
+
+      <div class="hero-grid"></div>
+
+      <div class="hero-content">
+
+        <div class="system-status">
+          <span class="status-dot"></span>
+          SYSTEM ONLINE
+        </div>
+
+        <p class="hero-kicker">
+          CREATIVE DEVELOPER // DIGITAL ARCHITECT
+        </p>
+
+        <h1 class="hero-title">
+          <span>NAYAN</span>
+          <span class="outline">5D</span>
+        </h1>
+
+        <p class="hero-description">
+          I BUILD DIGITAL EXPERIENCES THAT EXIST
+          SOMEWHERE BETWEEN <span>CODE</span>,
+          <span>DESIGN</span> AND <span>IMAGINATION</span>.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn magnetic">
+            <span>ENTER SYSTEM</span>
+            <b>↗</b>
+          </a>
+
+          <a href="#contact" class="text-link">
+            CONTACT ME →
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-meta">
+        <div>
+          <small>LOCATION</small>
+          <strong>INDIA // IN</strong>
+        </div>
+
+        <div>
+          <small>STATUS</small>
+          <strong class="green">AVAILABLE</strong>
+        </div>
+
+        <div>
+          <small>MODE</small>
+          <strong>CREATIVE</strong>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>SCROLL TO EXPLORE</span>
+        <div></div>
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="section about">
+
+      <div class="section-number">02</div>
+
+      <div class="section-heading">
+        <p>// IDENTITY</p>
+        <h2>WHO<br><span>AM I?</span></h2>
+      </div>
+
+      <div class="about-content">
+
+        <div class="terminal-box">
+          <div class="terminal-header">
+            <span></span>
+            <span></span>
+            <span></span>
+            <label>nayan@system:~</label>
+          </div>
+
+          <div class="terminal-body">
+            <p><span class="green">root@nayan</span>:~$ whoami</p>
+
+            <p class="terminal-output">
+              Creative developer, designer and digital explorer.
+            </p>
+
+            <p><span class="green">root@nayan</span>:~$ mission</p>
+
+            <p class="terminal-output">
+              Create experiences that people remember.
+            </p>
+
+            <p><span class="green">root@nayan</span>:~$ status</p>
+
+            <p class="terminal-output green">
+              ONLINE // BUILDING // EVOLVING
+            </p>
+
+            <span class="terminal-cursor">█</span>
+          </div>
+        </div>
+
+        <div class="about-text">
+
+          <p class="large-text">
+            I DON'T JUST BUILD WEBSITES.
+            <span>I BUILD DIGITAL WORLDS.</span>
+          </p>
+
+          <p>
+            My work combines visual design, animation,
+            interaction and technology to create digital
+            experiences with personality.
+          </p>
+
+          <p>
+            Every interface should feel alive.
+            Every interaction should have a purpose.
+            Every pixel should tell a story.
+          </p>
+
+          <div class="stats">
+
+            <div class="stat">
+              <strong data-count="50">0</strong>
+              <span>PROJECTS</span>
             </div>
 
-            <div class="loader-status">
-                INITIALIZING DIGITAL CORE
+            <div class="stat">
+              <strong data-count="20">0</strong>
+              <span>CLIENTS</span>
             </div>
 
-            <div class="loader-line">
-
-                <span class="loader-progress"></span>
-
+            <div class="stat">
+              <strong data-count="5">0</strong>
+              <span>YEARS</span>
             </div>
 
-            <div class="loader-percent">
-                00%
-            </div>
+          </div>
 
         </div>
 
-    </div>
+      </div>
 
+    </section>
 
-    <!-- =====================================================
-         CURSOR
-    ====================================================== -->
 
-    <div class="cursor"></div>
+    <!-- PROJECTS -->
 
-    <div class="cursor-ring"></div>
+    <section id="projects" class="section projects">
 
+      <div class="section-number">03</div>
 
-    <!-- =====================================================
-         BACKGROUND
-    ====================================================== -->
+      <div class="section-heading">
+        <p>// SELECTED WORK</p>
+        <h2>MY<br><span>PROJECTS</span></h2>
+      </div>
 
-    <canvas id="webgl"></canvas>
+      <div class="project-grid">
 
-    <div class="background-grid"></div>
+        <article class="project-card magnetic-card">
 
-    <div class="noise"></div>
+          <div class="project-number">001</div>
 
+          <div class="project-visual visual-one">
+            <span>CYBER//01</span>
+          </div>
 
-    <!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
+          <div class="project-info">
+            <p>WEB EXPERIENCE</p>
+            <h3>NEURAL<br>INTERFACE</h3>
+            <a href="#">VIEW PROJECT ↗</a>
+          </div>
 
-    <header class="site-header">
+        </article>
 
-        <nav class="nav">
+        <article class="project-card magnetic-card">
 
-            <a
-                href="#home"
-                class="logo magnetic"
-            >
-                NH<span>/</span>01
-            </a>
+          <div class="project-number">002</div>
 
+          <div class="project-visual visual-two">
+            <span>VOID//02</span>
+          </div>
 
-            <div class="nav-links">
+          <div class="project-info">
+            <p>3D EXPERIENCE</p>
+            <h3>DIGITAL<br>VOID</h3>
+            <a href="#">VIEW PROJECT ↗</a>
+          </div>
 
-                <a
-                    href="#work"
-                    class="nav-link"
-                >
-                    Work
-                </a>
+        </article>
 
-                <a
-                    href="#skills"
-                    class="nav-link"
-                >
-                    Skills
-                </a>
+        <article class="project-card magnetic-card">
 
-                <a
-                    href="#about"
-                    class="nav-link"
-                >
-                    About
-                </a>
+          <div class="project-number">003</div>
 
-                <a
-                    href="#contact"
-                    class="nav-link"
-                >
-                    Contact
-                </a>
+          <div class="project-visual visual-three">
+            <span>CORE//03</span>
+          </div>
 
-            </div>
+          <div class="project-info">
+            <p>BRAND SYSTEM</p>
+            <h3>QUANTUM<br>CORE</h3>
+            <a href="#">VIEW PROJECT ↗</a>
+          </div>
 
+        </article>
 
-            <button
-                class="menu-button"
-                aria-label="Open menu"
-            >
-                MENU
-            </button>
+      </div>
 
-        </nav>
+    </section>
 
-    </header>
 
+    <!-- SKILLS -->
 
-    <!-- =====================================================
-         MOBILE MENU
-    ====================================================== -->
+    <section id="skills" class="section skills">
 
-    <div class="mobile-menu">
+      <div class="section-number">04</div>
 
-        <button class="mobile-menu-close">
-            CLOSE
-        </button>
+      <div class="section-heading">
+        <p>// TECHNOLOGY</p>
+        <h2>MY<br><span>ARSENAL</span></h2>
+      </div>
 
-        <a href="#home">HOME</a>
+      <div class="skills-list">
 
-        <a href="#work">WORK</a>
+        <div class="skill">
+          <span>01</span>
+          <h3>HTML / CSS</h3>
+          <div class="skill-line"><i style="width:95%"></i></div>
+          <b>95%</b>
+        </div>
 
-        <a href="#skills">SKILLS</a>
+        <div class="skill">
+          <span>02</span>
+          <h3>JAVASCRIPT</h3>
+          <div class="skill-line"><i style="width:90%"></i></div>
+          <b>90%</b>
+        </div>
 
-        <a href="#about">ABOUT</a>
+        <div class="skill">
+          <span>03</span>
+          <h3>THREE.JS</h3>
+          <div class="skill-line"><i style="width:88%"></i></div>
+          <b>88%</b>
+        </div>
 
-        <a href="#contact">CONTACT</a>
+        <div class="skill">
+          <span>04</span>
+          <h3>UI / UX</h3>
+          <div class="skill-line"><i style="width:92%"></i></div>
+          <b>92%</b>
+        </div>
 
-    </div>
+        <div class="skill">
+          <span>05</span>
+          <h3>MOTION DESIGN</h3>
+          <div class="skill-line"><i style="width:85%"></i></div>
+          <b>85%</b>
+        </div>
 
+      </div>
 
-    <!-- =====================================================
-         MAIN
-    ====================================================== -->
+    </section>
 
-    <main>
 
+    <!-- CONTACT -->
 
-        <!-- =================================================
-             HERO
-        ================================================== -->
+    <section id="contact" class="section contact">
 
-        <section
-            id="home"
-            class="hero section"
-        >
+      <div class="section-number">05</div>
 
-            <div class="hero-container">
+      <div class="contact-inner">
 
-                <div class="hero-eyebrow reveal-up">
+        <p>// CONNECTION REQUEST</p>
 
-                    AI ENGINEER
-                    <span>×</span>
-                    CREATIVE DEVELOPER
+        <h2>
+          LET'S BUILD<br>
+          <span>SOMETHING</span><br>
+          IMPOSSIBLE.
+        </h2>
 
-                </div>
-
-
-                <h1 class="hero-title">
-
-                    <span class="title-line">
-                        <span>BUILD</span>
-                    </span>
-
-                    <span class="title-line outline">
-                        <span>THE</span>
-                    </span>
-
-                    <span class="title-line">
-                        <span>FUTURE.</span>
-                    </span>
-
-                </h1>
-
-
-                <div class="hero-bottom">
-
-                    <div class="hero-description">
-
-                        I create intelligent digital
-                        experiences where AI,
-                        programming and immersive
-                        interfaces collide.
-
-                    </div>
-
-
-                    <div class="scroll-indicator">
-
-                        <span>
-                            SCROLL TO EXPLORE
-                        </span>
-
-                        <span class="scroll-arrow">
-                            ↓
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             MANIFESTO
-        ================================================== -->
-
-        <section class="manifesto section">
-
-            <div class="container">
-
-                <div class="section-label">
-                    01 / VISION
-                </div>
-
-
-                <h2 class="manifesto-text">
-
-                    I DON'T JUST
-                    <span class="muted">WRITE CODE.</span>
-
-                    <br>
-
-                    I BUILD
-                    <span class="muted">DIGITAL WORLDS.</span>
-
-                    <br>
-
-                    FOR THE
-                    <span class="muted">NEXT ERA.</span>
-
-                </h2>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             PROJECTS
-        ================================================== -->
-
-        <section
-            id="work"
-            class="projects-section"
-        >
-
-            <div class="projects-sticky">
-
-                <div class="projects-heading">
-
-                    <span>
-                        02 / SELECTED WORK
-                    </span>
-
-                </div>
-
-
-                <div class="projects-track">
-
-
-                    <!-- PROJECT 01 -->
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            01
-                        </div>
-
-                        <div class="project-visual">
-
-                            <div class="orb orb-large"></div>
-
-                            <div class="orb-ring ring-one"></div>
-
-                            <div class="orb-ring ring-two"></div>
-
-                            <div class="orb-ring ring-three"></div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <div>
-
-                                <span class="project-category">
-                                    AI / MACHINE LEARNING
-                                </span>
-
-                                <h3>
-                                    AI CORE
-                                </h3>
-
-                            </div>
-
-
-                            <span class="project-year">
-                                2026
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 02 -->
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            02
-                        </div>
-
-                        <div class="project-visual">
-
-                            <div class="neural-grid"></div>
-
-                            <div class="neural-node node-1"></div>
-                            <div class="neural-node node-2"></div>
-                            <div class="neural-node node-3"></div>
-                            <div class="neural-node node-4"></div>
-                            <div class="neural-node node-5"></div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <div>
-
-                                <span class="project-category">
-                                    WEBGL / THREE.JS
-                                </span>
-
-                                <h3>
-                                    NEURAL WEB
-                                </h3>
-
-                            </div>
-
-
-                            <span class="project-year">
-                                2026
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 03 -->
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            03
-                        </div>
-
-                        <div class="project-visual code-visual">
-
-                            <div class="code-lines">
-
-                                <span>const future = await</span>
-
-                                <span>build({</span>
-
-                                <span>
-                                    intelligence: true,
-                                </span>
-
-                                <span>
-                                    imagination: true,
-                                </span>
-
-                                <span>});</span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <div>
-
-                                <span class="project-category">
-                                    JAVASCRIPT / AI
-                                </span>
-
-                                <h3>
-                                    CODE LAB
-                                </h3>
-
-                            </div>
-
-
-                            <span class="project-year">
-                                2026
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 04 -->
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            04
-                        </div>
-
-                        <div class="project-visual">
-
-                            <div class="future-sphere">
-
-                                <span></span>
-                                <span></span>
-                                <span></span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <div>
-
-                                <span class="project-category">
-                                    CREATIVE DEVELOPMENT
-                                </span>
-
-                                <h3>
-                                    FUTURE UI
-                                </h3>
-
-                            </div>
-
-
-                            <span class="project-year">
-                                2026
-                            </span>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             SKILLS
-        ================================================== -->
-
-        <section
-            id="skills"
-            class="skills section"
-        >
-
-            <div class="container">
-
-                <div class="section-label">
-                    03 / TECHNOLOGY
-                </div>
-
-
-                <div class="skills-list">
-
-
-                    <div class="skill-item">
-
-                        <span class="skill-index">
-                            01
-                        </span>
-
-                        <h3>
-                            Artificial Intelligence
-                        </h3>
-
-                        <span class="skill-type">
-                            AI / ML
-                        </span>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <span class="skill-index">
-                            02
-                        </span>
-
-                        <h3>
-                            JavaScript
-                        </h3>
-
-                        <span class="skill-type">
-                            DEVELOPMENT
-                        </span>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <span class="skill-index">
-                            03
-                        </span>
-
-                        <h3>
-                            Three.js
-                        </h3>
-
-                        <span class="skill-type">
-                            WEBGL
-                        </span>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <span class="skill-index">
-                            04
-                        </span>
-
-                        <h3>
-                            Python
-                        </h3>
-
-                        <span class="skill-type">
-                            BACKEND / AI
-                        </span>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <span class="skill-index">
-                            05
-                        </span>
-
-                        <h3>
-                            WebGL
-                        </h3>
-
-                        <span class="skill-type">
-                            3D / GRAPHICS
-                        </span>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <span class="skill-index">
-                            06
-                        </span>
-
-                        <h3>
-                            Creative Development
-                        </h3>
-
-                        <span class="skill-type">
-                            DIGITAL EXPERIENCES
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             ABOUT
-        ================================================== -->
-
-        <section
-            id="about"
-            class="about section"
-        >
-
-            <div class="container about-grid">
-
-                <div>
-
-                    <div class="section-label">
-                        04 / ABOUT
-                    </div>
-
-                    <h2 class="about-title">
-
-                        CODE
-                        <br>
-
-                        MEETS
-                        <br>
-
-                        IMAGINATION.
-
-                    </h2>
-
-                </div>
-
-
-                <div class="about-copy">
-
-                    <p>
-                        I'm Nayan Hira — a developer
-                        exploring the intersection of
-                        artificial intelligence,
-                        programming and immersive
-                        digital experiences.
-                    </p>
-
-                    <p>
-                        I enjoy transforming complex
-                        technology into interfaces
-                        that feel alive, intuitive and
-                        memorable.
-                    </p>
-
-                    <p>
-                        My playground sits somewhere
-                        between software engineering,
-                        AI and digital art.
-                    </p>
-
-
-                    <div class="about-status">
-
-                        <span class="status-dot"></span>
-
-                        AVAILABLE FOR CREATIVE PROJECTS
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             CONTACT
-        ================================================== -->
-
-        <section
-            id="contact"
-            class="contact section"
-        >
-
-            <div class="container">
-
-                <div class="section-label">
-                    05 / CONTACT
-                </div>
-
-
-                <h2 class="contact-title">
-
-                    LET'S
-
-                    <span>
-                        BUILD.
-                    </span>
-
-                </h2>
-
-
-                <!-- CHANGE EMAIL -->
-
-                <a
-                    href="mailto:your@email.com"
-                    class="contact-button magnetic"
-                >
-
-                    START A CONVERSATION
-
-                    <span>
-                        →
-                    </span>
-
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer>
-
-        <span>
-            © 2026 NAYAN HIRA
-        </span>
-
-        <span>
-            AI × CODE × FUTURE
-        </span>
-
-        <a href="#home">
-            BACK TO TOP ↑
+        <a href="mailto:hello@example.com" class="contact-button magnetic">
+          START A PROJECT
+          <span>↗</span>
         </a>
 
-    </footer>
+      </div>
 
+      <footer>
 
-    <!-- =====================================================
-         GSAP
-    ====================================================== -->
+        <span>© 2026 NAYAN_5D</span>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"
-    ></script>
+        <div>
+          <a href="#">INSTAGRAM</a>
+          <a href="#">GITHUB</a>
+          <a href="#">LINKEDIN</a>
+        </div>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"
-    ></script>
+        <span>DESIGNED // CODED // NAYAN</span>
 
+      </footer>
 
-    <!-- =====================================================
-         THREE.JS
-    ====================================================== -->
+    </section>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js"
-    ></script>
+  </main>
 
-
-    <!-- =====================================================
-         APPLICATION
-    ====================================================== -->
-
-    <script
-        type="module"
-        src="js/main.js"
-    ></script>
+  <script type="module" src="js/three-scene.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
-
 </html>
